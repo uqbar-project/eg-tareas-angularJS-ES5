@@ -1,20 +1,5 @@
 'use strict';
 
-var app = angular.module('tareasApp', []);
-
-app.service('tareasService', function ($http) {
-
-  this.findAll = function (callback, errorHandler) {
-    $http.get('/tareas').success(callback).error(errorHandler);
-  }
-
-  this.update = function (tarea, callback, errorHandler) {
-    $http.put('/tareas/' + tarea.id, tarea).success(callback).error(
-      errorHandler);
-  }
-
-});
-
 app.controller('TareasController', function (tareasService, $timeout) {
 
   var self = this;
