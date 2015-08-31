@@ -64,7 +64,7 @@
           <tr data-ng-repeat="tarea in tareasCtrl.tareas | filter:tareaBuscada" class="animate-repeat">
             <td class="col-xs-4">{{tarea.descripcion}}</td>
             <td class="col-xs-2">{{tarea.iteracion}}</td>
-            <td class="col-xs-3">{{tarea.asignadoA}}</td>
+            <td class="col-xs-3">{{tarea.asignatario}}</td>
             <td class="col-xs-2">{{tarea.fecha | date: 'dd/MM/yyyy'}}</td>
             <td class="col-xs-1"><span
               ng-class="{ 'label label-danger' : tarea.porcentajeCumplimiento == 0,
