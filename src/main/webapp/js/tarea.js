@@ -28,3 +28,4 @@ Tarea.asTarea = function (jsonTarea) {
   // esto sí me gusta
   return angular.extend(new Tarea(), jsonTarea);
 };
+

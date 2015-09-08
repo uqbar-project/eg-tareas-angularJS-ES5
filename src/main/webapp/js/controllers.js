@@ -21,8 +21,8 @@ app.controller('TareasController', function (tareasService, $timeout) {
 
   // TRAER LAS TAREAS
   this.getTareas = function () {
-    tareasService.findAll(function (data) {
-      self.tareas = _.map(data, transformarATarea);
+    tareasService.findAll(function (response) {
+      self.tareas = _.map(response.data, transformarATarea);
     }, notificarError);
   }
 
@@ -44,7 +44,6 @@ app.controller('TareasController', function (tareasService, $timeout) {
   this.asignar = function (asignatario) {
 	self.tareaSeleccionada.asignadoA = asignatario;
     tareasService.update(self.tareaSeleccionada, function () {
-        self.getTareas();
       }, notificarError);
   };
 

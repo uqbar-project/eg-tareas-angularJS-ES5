@@ -16,8 +16,8 @@ app.directive('comboUsuarios', function () {
       this.asignar = this.callback();
       this.asignatariosPosibles = [];
 
-      usuariosService.findAll(function (data) {
-        self.asignatariosPosibles = data;
+      usuariosService.findAll(function (response) {
+        self.asignatariosPosibles = response.data;
       }, function () {
         self.errors.push(mensaje);
       });
