@@ -59,17 +59,4 @@ class Tarea extends Entity {
 		this.asignatario = usuario
 	}
 
-	override equals(Object o) {
-		try {
-			val otra = o as Tarea
-			return otra.id.equals(this.id)
-		} catch (ClassCastException e) {
-			return false
-		}
-	}
-
-	override hashCode() {
-		id.hashCode
-	}
-
 }

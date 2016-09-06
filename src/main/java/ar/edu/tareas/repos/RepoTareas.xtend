@@ -4,9 +4,9 @@ import ar.edu.tareas.domain.Tarea
 import ar.edu.tareas.domain.Usuario
 import java.util.Date
 import org.apache.commons.collections15.Predicate
-import org.uqbar.commons.model.CollectionBasedHome
+import org.uqbar.commons.model.CollectionBasedRepo
 
-class RepoTareas extends CollectionBasedHome<Tarea> {
+class RepoTareas extends CollectionBasedRepo<Tarea> {
 
 	RepoUsuarios repoUsuario
 
