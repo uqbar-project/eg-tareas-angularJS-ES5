@@ -2,9 +2,9 @@ package ar.edu.tareas.repos
 
 import ar.edu.tareas.domain.Usuario
 import org.apache.commons.collections15.Predicate
-import org.uqbar.commons.model.CollectionBasedHome
+import org.uqbar.commons.model.CollectionBasedRepo
 
-class RepoUsuarios extends CollectionBasedHome<Usuario> {
+class RepoUsuarios extends CollectionBasedRepo<Usuario> {
 
 	/* Singleton */
 	static RepoUsuarios repoUsuarios

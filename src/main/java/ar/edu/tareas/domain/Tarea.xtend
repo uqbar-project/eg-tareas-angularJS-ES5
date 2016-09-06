@@ -57,19 +57,6 @@ class Tarea extends Entity {
 		descripcion
 	}
 
-	override equals(Object o) {
-		try {
-			val otra = o as Tarea
-			return otra.id.equals(this.id)
-		} catch (ClassCastException e) {
-			return false
-		}
-	}	
-	
-	override hashCode() {
-		id.hashCode
-	}
-	
 	@JsonProperty("asignadoA")
 	def String getAsignadoA() {
 		if (asignatario == null) {
