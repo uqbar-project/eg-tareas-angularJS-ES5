@@ -4,3 +4,4 @@
 /bin/
 *generated*
 /target/
+*node_modules*
