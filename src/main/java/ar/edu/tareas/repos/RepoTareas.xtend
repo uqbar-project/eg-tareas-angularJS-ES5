@@ -22,11 +22,11 @@ class RepoTareas extends CollectionBasedRepo<Tarea> {
 
 	private new() {
 		repoUsuario = RepoUsuarios.instance
-		this.crearTarea('Desarrollar componente de envio de mails', "Marcos Pavelek", new Date(), "Iteración 1", 0)
-		this.crearTarea('Implementar single sign on desde la extranet', null, new Date(9, 9, 114), "Iteración 1", 76)
-		this.crearTarea('Cancelar pedidos que esten pendientes desde hace 2 meses', "Rodrigo Grisolia", new Date(3, 2, 115),
+		this.crearTarea("Desarrollar componente de envio de mails", "Marcos Pavelek", new Date(), "Iteración 1", 0)
+		this.crearTarea("Implementar single sign on desde la extranet", null, new Date(9, 9, 114), "Iteración 1", 76)
+		this.crearTarea("Cancelar pedidos que esten pendientes desde hace 2 meses", "Rodrigo Grisolia", new Date(3, 2, 115),
 			"Iteración 1", 22)
-		this.crearTarea('Mostrar info del pedido cuando esta finalizado', null, new Date(8, 10, 114), "Iteración 2", 90)
+		this.crearTarea("Mostrar info del pedido cuando esta finalizado", null, new Date(8, 10, 114), "Iteración 2", 90)
 	}
 
 	def crearTarea(String unaDescripcion, String responsable, Date date, String unaIteracion, int cumplimiento) {
