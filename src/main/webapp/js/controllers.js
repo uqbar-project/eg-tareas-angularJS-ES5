@@ -5,15 +5,12 @@ app.controller('TareasController', function (tareasService, $timeout) {
   var self = this;
 
   self.errors = [];
+  self.$timeout = $timeout;
 
-  function notificarError(mensaje) {
-    self.errors.push(mensaje);
-    self.getTareas();
-    $timeout(function () {
-      while (self.errors.length > 0)
-        self.errors.pop();
-    }, 3000);
-  };
+  function notificarErrorTareas(infoError) {
+  	notificarError(self, infoError);
+  	self.getTareas();
+  }
 
   function transformarATarea(jsonTarea) {
     return Tarea.asTarea(jsonTarea);
@@ -23,7 +20,9 @@ app.controller('TareasController', function (tareasService, $timeout) {
   this.getTareas = function () {
     tareasService.findAll(function (response) {
       self.tareas = _.map(response.data, transformarATarea);
-    }, notificarError);
+    }, function() {
+    	notificarError(self)
+    });
   }
 
   // CUMPLIR TAREA
@@ -31,7 +30,7 @@ app.controller('TareasController', function (tareasService, $timeout) {
     tarea.cumplir();
     tareasService.update(tarea, function () {
       self.getTareas();
-    }, notificarError);
+    }, notificarErrorTareas);
   }
 
   // FUNCIONES PARA ASIGNAR

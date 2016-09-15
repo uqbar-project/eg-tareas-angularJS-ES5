@@ -50,6 +50,9 @@
   </div>
   <div class="alert alert-danger animate-repeat" ng-repeat="error in tareasCtrl.errors">{{error}}</div>
 
-  <combo-usuarios tarea="tareasCtrl.tareaSeleccionada" callback="tareasCtrl.asignar"></combo-usuarios>
+  <combo-usuarios 
+      tarea="tareasCtrl.tareaSeleccionada" 
+      callback="tareasCtrl.asignar">
+  </combo-usuarios>
 
 </div>

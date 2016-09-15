@@ -48,6 +48,7 @@ class TareasController {
 	@Put('/tareas/:id')
 	def Result actualizar(@Body String body) {
 		try {
+			//if (true) throw new RuntimeException("ACHALAY")
 			val actualizado = body.fromJson(Tarea)
 
 			val asignadoA = body.getPropertyValue("asignadoA")
