@@ -1,6 +1,8 @@
 # Lista de TO-DO (Tareas pendientes) en Angular
 
-![image](https://cloud.githubusercontent.com/assets/4549002/17751553/fa4e9aaa-649d-11e6-8593-5808b2c57611.png)
+![video](video/demo.gif)
+
+<img src="https://cloud.githubusercontent.com/assets/4549002/17751553/fa4e9aaa-649d-11e6-8593-5808b2c57611.png" width="40%" height="40%"></img>
 
 Tenés dos versiones
 
